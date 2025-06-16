@@ -16,8 +16,8 @@ from torch.utils.data import DataLoader
 from torch import optim
 from torch.autograd import Variable
 from config_data import config
-from losses_cls_seg import acc, Loss, GetPBB, nms
-from network_architecture.model import Net
+from losses_cls_seg import Loss, GetPBB, nms
+from network_architecture.model import Layers
 from colorama import Fore, Back, Style
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
@@ -64,7 +64,7 @@ def main():
  
     torch.manual_seed(0)
 
-    net = Net()
+    net = Layers()
     net = net.to(device)
     loss = Loss(config)
     get_pbb = GetPBB(config)
@@ -100,7 +100,7 @@ def main():
             pin_memory=False)
 
         # check data consistency
-        for i, (dataset, target, nzhw) in enumerate(test_loader): 
+        for i, (dataset, target, nzhw, originimg) in enumerate(test_loader): 
             if i >= len(testfilelist)/args.batch_size:
                 break
             

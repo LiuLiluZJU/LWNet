@@ -16,8 +16,8 @@ from torch.utils.data import DataLoader
 from torch import optim
 from torch.autograd import Variable
 from config_data import config
-from losses_cls_seg import acc, Loss, GetPBB
-from network_architecture.model import Net
+from losses_cls_seg import Loss, GetPBB
+from network_architecture.model import Layers
 from colorama import Fore, Back, Style
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
@@ -63,7 +63,7 @@ def main():
  
     torch.manual_seed(0)
 
-    net = Net()
+    net = Layers()
     net = net.to(device)
     loss = Loss(config)
     
@@ -79,7 +79,6 @@ def main():
     valdatadir = config_training['val_preprocess_result_path']
 
     #train
-    print (len(trainfilelist))
     trainfilelist = []
     for folder in config_training['train_data_path']:
         print (folder)
