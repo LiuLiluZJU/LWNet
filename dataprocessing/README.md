@@ -2,7 +2,7 @@
 
 This document describes the preprocessing pipelines for the LUNA16 and LIDC-IDRI datasets, which are widely used for lung nodule detection and analysis.
 
-<img src="/Users/nxp/Desktop/AIS论文改稿/HiSMART/dataprocessing/Processed_LIDC-IDRI_example.jpg" alt="Processed_LIDC-IDRI_example" style="zoom:72%;" />
+<img src="./Processed_LIDC-IDRI_example.jpg" alt="Processed_LIDC-IDRI_example" style="zoom:72%;" />
 
 <img src="./Processed_LUNA16_example.jpg" style="zoom:100%;" />
 
