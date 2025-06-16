@@ -10,7 +10,7 @@ Lung nodule detection and segmentation from CT scans are essential for lung canc
 
 
 
-![](./Framework.jpg)
+![](./Framework.png)
 
 
 
